@@ -14,7 +14,6 @@ N = int(input())
 arr = []
 for _ in range(N):
     arr.append(input().strip())
-print(arr)
 
 for i in range(N-1):
     for j in range(i+1, N): 
@@ -30,13 +29,14 @@ for i in range(N-1):
                 if b.isdigit():
                     sumj +=int(b)
             if sumi > sumj:
-                arr[i], arr[j] == arr[j], arr[i]                
+                arr[i],arr[j] = arr[j],arr[i]                
             elif sumi == sumj:                # 문자열의 길이가 같고 문자열 숫자의 합이 같을 경우 사전순으로 정렬  
                 for a, b in zip(arr[i], arr[j]):
                     if a > b:
-                        arr[i], arr[j] == arr[j], arr[i]
+                        arr[i], arr[j] = arr[j], arr[i]
                         break
                     elif a < b:
                         break
 
-print(arr)
+for i in arr:
+    print(i)
