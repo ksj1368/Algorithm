@@ -7,7 +7,7 @@ def isDecimal(num):
     if(num <= 1):
         return False 
     #에라토스테네스의 체
-    for i in range(2, num//2+1):
+    for i in range(2, int(num**0.5)+1):
         if num%i == 0:
             return False    
     return True
