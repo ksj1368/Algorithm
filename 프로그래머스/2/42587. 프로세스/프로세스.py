@@ -14,7 +14,6 @@ def solution(priorities, location):
     while True:
         curr_prior = priorities[0]
         curr_idx = idxs[0]
-        print(curr_prior, curr_idx)
         if curr_prior == max(priorities):
             answer +=1
             if curr_idx == location:
