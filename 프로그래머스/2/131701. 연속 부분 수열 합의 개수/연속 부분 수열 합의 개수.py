@@ -1,5 +1,4 @@
 def solution(elements):
-    
     answer = set()
     elements_len = len(elements)
     elements = elements*2
