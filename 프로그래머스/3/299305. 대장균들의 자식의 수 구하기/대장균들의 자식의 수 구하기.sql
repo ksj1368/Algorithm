@@ -1,0 +1,20 @@
+-- 코드를 작성해주세요
+SELECT
+    ID,
+    IFNULL(CNT, 0) AS CHILD_COUNT
+FROM
+    ECOLI_DATA AS EA
+LEFT JOIN(
+    SELECT 
+        PARENT_ID, 
+        COUNT(PARENT_ID) AS CNT
+    FROM
+        ECOLI_DATA
+    GROUP BY
+        PARENT_ID) AS EB
+    ON 
+        EA.ID = EB.PARENT_ID
+ORDER BY
+    ID ASC;
+
+    
