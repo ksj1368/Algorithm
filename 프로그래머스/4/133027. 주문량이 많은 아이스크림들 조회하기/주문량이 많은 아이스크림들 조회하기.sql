@@ -14,7 +14,7 @@ UNION_ORDER as (
         TOTAL_ORDER
     from
         TOTAL_JULY
-    union
+    union all
     select 
         FLAVOR,
         TOTAL_ORDER
