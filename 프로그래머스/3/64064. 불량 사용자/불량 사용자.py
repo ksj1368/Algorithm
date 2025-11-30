@@ -1,6 +1,5 @@
 import re
 def solution(user_id, banned_id):
-    
     b_candid = [[] for _ in range(len(banned_id))]
 
     # 일치하는 user_id 찾기
