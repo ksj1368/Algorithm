@@ -6,9 +6,7 @@ def solution(s):
         for i in x:
             stack.append(i)
             if len(stack) >= 3 and stack[-3:] == ['1', '1', '0']:
-                stack.pop()
-                stack.pop()
-                stack.pop()
+                del stack[-3:]
                 cnt += 1
         stack = "".join(stack)
         zero_idx = stack.rfind('0') # 인덱스 반환, 없을 경우 -1 반환 
